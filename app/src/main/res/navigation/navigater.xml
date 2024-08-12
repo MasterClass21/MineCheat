@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/Scoentnawigiton">
+
+    <fragment
+        android:id="@+id/Scoentnawigiton"
+        android:name="com.example.nawigtionapp.SecondFragment"
+        android:label="fragment_scoent_nawigiton"
+        tools:layout="@layout/fragment_scoent_nawigiton" >
+        <action
+            android:id="@+id/action_scoentNawigiton_to_fiersFragment"
+            app:destination="@id/FiersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FiersFragment"
+        android:name="com.example.nawigtionapp.FirstFragment"
+        android:label="fragment_fiers"
+        tools:layout="@layout/fragment_fiers" >
+        <action
+            android:id="@+id/action_fiersFragment_to_thierFragment"
+            app:destination="@id/thierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thierFragment"
+        android:name="com.example.nawigtionapp.MainFragment"
+        android:label="fragment_thier"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_thierFragment_to_scoentNawigiton"
+            app:destination="@id/Scoentnawigiton" />
+        <action
+            android:id="@+id/action_thierFragment_to_scoentNawigiton2"
+            app:destination="@id/Scoentnawigiton" />
+    </fragment>
+</navigation>
